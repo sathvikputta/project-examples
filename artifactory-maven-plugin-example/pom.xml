@@ -69,9 +69,9 @@
                                 <timeoutSec>60</timeoutSec>
                             </artifactory>
                             <publisher>
-                                <contextUrl>http://localhost:8081/artifactory</contextUrl>
-                                <username>${username}</username>
-                                <password>${password}</password>
+                                <contextUrl>http://192.168.56.29:8081/artifactory</contextUrl>
+                                <username>ramesh</username>
+                                <password>test123</password>
                                 <excludePatterns>*-tests.jar</excludePatterns>
                                 <repoKey>libs-release-local</repoKey>
                                 <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
@@ -133,4 +133,16 @@
         </pluginRepository>
     </pluginRepositories>
 
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>localhost.localdomain-releases</name>
+        <url>http://192.168.56.29:8081/artifactory/ramesh</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>localhost.localdomain-snapshots</name>
+        <url>http://192.168.56.29:8081/artifactory/ramesh</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
